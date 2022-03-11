@@ -12809,11 +12809,10 @@ The best model was trained with rank 4
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">new_user_recommendations_rating_title_and_count_RDD_final</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">top_movies</span> <span class="o">=</span> <span class="n">new_user_recommendations_rating_title_and_count_RDD_final</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">25</span><span class="p">)</span><span class="o">.</span><span class="n">takeOrdered</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">top_movies</span> <span class="o">=</span> <span class="n">new_user_recommendations_rating_title_and_count_RDD_final</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">25</span><span class="p">)</span><span class="o">.</span><span class="n">takeOrdered</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 
 <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;TOP 15 recommended movies (with more than 25 reviews):</span><span class="se">\n</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">top_movies</span><span class="p">))))</span>
 </pre></div>
@@ -12832,8 +12831,7 @@ The best model was trained with rank 4
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[(&#39;Nowhere in Africa (Nirgendwo in Afrika) (2001)&#39;, 3.5917633183742277, 717), (&#39;Once a Thief (1965)&#39;, 3.7323287718854887, 1), (&#39;Blues in the Night (1941)&#39;, 1.511409816873222, 9)]
-TOP 15 recommended movies (with more than 25 reviews):
+<pre>TOP 15 recommended movies (with more than 25 reviews):
 (&#39;&#34;Very Potter Sequel&#39;, 4.203361392733084, 35)
 (&#39;Anne of Green Gables: The Sequel (a.k.a. Anne of Avonlea) (1987)&#39;, 4.194682324929555, 342)
 (&#39;Drishyam (2013)&#39;, 4.194313087843041, 37)
@@ -12868,7 +12866,7 @@ TOP 15 recommended movies (with more than 25 reviews):
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">top_movies</span> <span class="o">=</span> <span class="n">new_user_recommendations_rating_title_and_count_RDD_final</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">takeOrdered</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
