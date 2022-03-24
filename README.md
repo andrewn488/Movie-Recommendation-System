@@ -3,10 +3,10 @@
 Collaboration with Christine Rich, Tamlyn Tamura, Ian Ceazar Basco, Glen Lewis, Andrew Nalundasan
 
 **Purpose:** 
-A new startup business, Ripe Pumpkins - a movie review-aggregation service, would like to implement Pumpkinmeter, a measurement of collaborative recommendation for millions of fans. The board of directors have been convinced by the recent success of recommendation model in streaming services and would like to know the potential in the Ripe Pumpkins' new initiative, Pumpkinmeter score. Prepare data insights/foresights that will be part of the CEO's presentation at the board's next meeting.
+The purpose of this project is to build an on-line movie recommender using Spark and present the system to the board of an imaginary company, Ripe Pumpkins.
 
 **Research Question:**
-The board like to explore if the recommendation engine yield insights of individual customer's preferences that eventually affect customer's likelihood stay with our services than competitors' services.
+The board would like to explore if the recommendation engine yield insights of individual customer's preferences that eventually affect customer's likelihood stay with our services than competitors' services.
 
 **Data:** 
 Data collected by GroupLens found here: https://movielens.org/
